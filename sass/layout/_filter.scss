@@ -1,0 +1,12 @@
+.filter-list {
+    display: flex;
+    padding-left: 0;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.filter-list__item {
+    margin-right: 8px;
+&:last-child {
+    margin-right: 0;
+    }
+}

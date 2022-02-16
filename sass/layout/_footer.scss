@@ -1,0 +1,130 @@
+.footer {
+    background-color: #2F303A;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.footer-list__link {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: Roboto;
+    @include font(14px, 400, 1.71);
+    transition: color 250ms var(--timing-function);
+&:focus,
+&:hover {
+    color: var(--accent-color);
+    }
+}
+.footer-list__item {
+    margin-bottom: 9px;
+    font-family: Roboto;
+font-style: normal;
+&:last-child {
+    margin-bottom: 0;
+    }
+}
+.footer-list {
+    padding-left: 0;
+}
+.footer-list__maps {
+    display: inline-block;
+    color: #ffffff;
+    font-family: Roboto, monospace;
+    @include font(14px, 400, 1.71);
+    text-decoration: none;
+    transition: color 250ms var(--timing-function);
+&:hover,
+&:focus {
+    color: var(--accent-color);
+    }
+}
+
+/* Футер "Присоединяйтесь" */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.join-title {
+    color: #ffffff;
+    @include font($fs: 14px, $lh: 1.14);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.join-list {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    list-style: none;
+}
+.join-list__link {
+    color: #ffffff;
+    @extend %align-list;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 250ms var(--timing-function);
+&:hover,
+&:focus {
+    background-color: var(--accent-color);
+    }
+}
+.join-list__item {
+    margin-right: 10px;
+&:last-child {
+    margin-right: 0;
+    } 
+}
+.join-list__link svg {
+    fill: currentColor;
+}
+
+.footer-block__btn {
+    @extend %align-list;
+    justify-content: center;
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;
+    border: transparent;
+    @include font-btn;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 10px 28px 10px 29px;
+    }
+    .footer-block__icon {
+        margin-left: 10px;
+    }
+    .footer-form__text {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    }
+    .footer-block {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .footer-block__input {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.25;
+    @extend %align-list;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    margin-right: 12px;
+    min-width: 358px;
+    min-height: 50px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    padding: 15px 16px;
+    }

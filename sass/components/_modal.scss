@@ -1,0 +1,189 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity 250ms var(--timing-function);
+    z-index: 9;
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    min-width: 528px;
+    min-height: 581px;
+    border-radius: 4px;
+    padding: 40px;
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing-function);
+    background-color: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.modal__btn-close {
+    position: absolute;
+    @extend %align-list;
+    justify-content: center;
+    cursor: pointer;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    transition: color 250ms var(--transition-timing-function);
+&:hover,
+&:focus {
+  fill: var(--accent-color);
+    }
+}
+.modal__btn-close__icon {
+    transition: fill 250ms var(--timing-function);
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    }
+.modal__title {
+    display: block;
+    @include font;
+    text-align: center;       
+    color: var(--title-text-color);
+    margin-bottom: 12px;
+    }
+.form__field {
+    margin-bottom: 10px;
+    }
+.input__text {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+    width: 448px;
+    @include font(12px, 400, 1.16, 0.01em);
+    }
+.input__wrap{
+    display: block;
+    position: relative;
+    }
+.form__input {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 12px 42px;
+    outline: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+&:focus {
+    border-color: var(--accent-color);
+& + .input__icon {
+    fill: var(--accent-color);
+        }
+    }
+}
+.input__icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: var(--backgroung-color);
+}
+.form__text {
+    min-height: 96px;
+    cursor: pointer;
+    width: 100%;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    resize: none;
+    outline: none;
+    display: block;
+    padding: 12px 16px;
+    transition: border-color 250ms var(--timing-function);
+&:focus {
+    border-color: var(--accent-color);
+  }
+&::placeholder {
+    font-family: Roboto;
+    font-style: normal;
+    @include font(14px, 400, 1.14, 0.01em);
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+// CHECKBOX
+.checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+ }
+.form__field-checkbox {
+    @extend %align-list;
+    justify-content: center;
+    margin-top: 20px;
+ }
+ .checkbox__label {
+    @include font(14px, 400, 1.71);
+    color: var(--primary-text-color);
+    position: relative;
+    @extend %align-list;
+    justify-content: center;
+ }
+ .checkbox__link {
+    text-decoration-line: underline;
+    color: var(--accent-color);
+}
+.checkbox__label {
+    span {
+        width: 16px;
+        height: 15px;
+        border: 2px solid var(--title-text-color);
+        border-radius: 2px;
+        margin-right: 8px;
+        @extend %align-list;
+        justify-content: center;
+        cursor: pointer;
+    }
+}
+checkbox__icon {
+    fill: transparent;
+}
+.checkbox:checked + .checkbox__label span {
+    border: none;
+    background-color: var(--accent-color);
+}
+.checkbox:checked + .checkbox__label .checkbox__icon {
+    fill: #FFFFFF;
+}
+.form__btn {
+    @extend %align-list;
+    justify-content: center;
+    margin-top: 30px;
+}
+.form__btn--send {
+    padding: 10px 55px 10px 56px;
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    color: #ffffff;
+    border: transparent;
+    
+    font-family: Roboto;
+    font-style: normal;
+    @include font-btn;
+    cursor: pointer;
+    transition: background-color 250ms var(--timing-function);
+    
+&:focus,
+&:hover {
+    background-color: #188CE8;
+    }
+}

@@ -1,0 +1,38 @@
+.feature {
+    padding-top: 0;
+}
+
+.feature-list {
+    display: flex;
+    padding-left: 0;
+    justify-content: space-between;
+}
+.feature-list__item {
+    flex-basis: calc(100% / 3);
+    margin-right: 30px;
+    position: relative;
+&:last-child {
+    margin-right: 0;
+    }
+}
+.feature__title {
+    color: var(--title-text-color);
+    font-family: Roboto, monospace;
+    @include font($fs: 36px, $lh: 1.17);
+    text-align: center;
+    margin-bottom: 50px;
+}
+.feature-list__text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    @extend %align-list;
+    justify-content: center;
+    color: #FFFFFF;
+    background: rgba(47, 48, 58, 0.8);
+    @include font($fs: 14px, $lh: 1.14);
+    text-align: center;
+    text-transform: uppercase;
+}
