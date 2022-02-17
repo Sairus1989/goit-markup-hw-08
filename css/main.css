@@ -47,7 +47,7 @@ a {
   display: none;
 }
 
-.footer-block__input, .join-list__link, .clients__link, .feature-list__text, .qualities-list__block, .site-nav, .header__container, .form__btn, .checkbox__label span, .checkbox__label, .form__field-checkbox, .modal__btn-close, .footer-block__btn {
+.footer-block__input, .join-list__link, .clients__link, .feature-list__text, .qualities-list__block, .header__container, .form__btn, .checkbox__label span, .checkbox__label, .form__field-checkbox, .modal__btn-close, .footer-block__btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -62,6 +62,21 @@ a {
   padding-right: 15px;
   margin: 0 auto;
 }
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768x;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
 
 .header__logo {
   color: var(--accent-color);
@@ -71,6 +86,12 @@ a {
   line-height: 1.19;
   letter-spacing: 0.03em;
   text-decoration: none;
+}
+@media screen and (max-width: 767px) {
+  .header__logo {
+    display: inline-block;
+    padding: 16px 0 16px 0;
+  }
 }
 
 .header__logo-1 {
@@ -444,9 +465,38 @@ checkbox__icon {
   letter-spacing: 0.02em;
   text-decoration: none;
 }
+@media screen and (mіn-width: 480px) {
+  .header {
+    width: 480px;
+    margin: 0;
+  }
+}
 
 .header__container {
+  position: relative;
   border-bottom: 1px solid #ECECEC;
+}
+@media screen and (max-width: 767) {
+  .header__container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.site-nav {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .site-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .top-list__link {
@@ -462,11 +512,24 @@ checkbox__icon {
 }
 
 .bottom-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-left: 0;
-  margin-left: auto;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .bottom-list {
+    display: block;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .bottom-list {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    margin-left: auto;
+  }
 }
 
 .bottom-list__item + .bottom-list__item {
@@ -474,12 +537,17 @@ checkbox__icon {
 }
 
 .top-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 93px;
-  padding-left: 0;
-  color: var(--title-text-color);
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .top-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 93px;
+    padding-left: 0;
+    color: var(--title-text-color);
+  }
 }
 
 .top-list__item {
@@ -536,6 +604,48 @@ checkbox__icon {
   fill: currentColor;
 }
 
+.menu-open-btn {
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  border: none;
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .menu-open-btn {
+    display: none;
+  }
+}
+.menu-open-btn .menu-icon__close {
+  display: none;
+}
+.menu-open-btn.is-open .menu-icon__close {
+  display: block;
+}
+.menu-open-btn.is-open .menu-icon_open {
+  display: none;
+}
+
+.menu-icon_open {
+  padding-right: 23px;
+}
+
+.container-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: palegoldenrod;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+.container-menu.is-open {
+  display: block;
+}
+
 .hero {
   background-color: #2F303A;
   text-align: center;
@@ -548,7 +658,6 @@ checkbox__icon {
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/heroesoptimiz.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  position: relative;
 }
 
 .hero__title {
@@ -614,6 +723,14 @@ checkbox__icon {
 
 .feature {
   padding-top: 0;
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .feature {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .feature-list {
