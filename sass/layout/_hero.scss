@@ -1,9 +1,15 @@
 .hero {
+    padding-top: 118px;
+    padding-bottom: 118px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #2F303A;
     text-align: center;
+    @include desk {
     padding-bottom: 200px;
     padding-top: 200px;
     max-width: 1600px;
+    }
     margin-left: auto;
     margin-right: auto;
     background-image: linear-gradient( to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
@@ -14,9 +20,17 @@
 }
 
 .hero__title {
-    color: #ffffff;
-    font-family: Roboto, monospace;
-    @include font(44px, 900, 1.36, 0.06em);
-    margin-bottom: 30px;
-    text-transform: uppercase;
+@include font(26px, 900, 1.61, 0.06em);
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  max-width: 360px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  @include desk {
+    font-size: 44px;
+    line-height: 1.36;
+    max-width: 696px;
+  }
 }

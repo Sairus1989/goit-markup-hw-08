@@ -57,7 +57,7 @@ a {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -81,17 +81,11 @@ a {
 .header__logo {
   color: var(--accent-color);
   font-family: Raleway, monospace;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 700;
-  line-height: 1.19;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   text-decoration: none;
-}
-@media screen and (max-width: 767px) {
-  .header__logo {
-    display: inline-block;
-    padding: 16px 0 16px 0;
-  }
 }
 
 .header__logo-1 {
@@ -102,9 +96,9 @@ a {
   display: inline-block;
   color: var(--accent-color);
   font-family: Raleway, monospace;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 700;
-  line-height: 1.19;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   text-decoration: none;
   margin-bottom: 20px;
@@ -474,13 +468,12 @@ checkbox__icon {
 
 .header__container {
   position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-bottom: 1px solid #ECECEC;
-}
-@media screen and (max-width: 767) {
-  .header__container {
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
 }
 
 .site-nav {
@@ -605,6 +598,7 @@ checkbox__icon {
 }
 
 .menu-open-btn {
+  font-size: 100%;
   width: 40px;
   height: 40px;
   margin-left: auto;
@@ -627,8 +621,13 @@ checkbox__icon {
   display: none;
 }
 
-.menu-icon_open {
-  padding-right: 23px;
+.menu-open-btn__icon {
+  color: #000;
+  -webkit-transition: color var(--transition-duration) var(--transition-timing-function);
+  transition: color var(--transition-duration) var(--transition-timing-function);
+}
+.menu-open-btn__icon:hover, .menu-open-btn__icon:focus {
+  color: var(--accent-color);
 }
 
 .container-menu {
@@ -647,11 +646,12 @@ checkbox__icon {
 }
 
 .hero {
+  padding-top: 118px;
+  padding-bottom: 118px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #2F303A;
   text-align: center;
-  padding-bottom: 200px;
-  padding-top: 200px;
-  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/heroesoptimiz.jpg);
@@ -659,16 +659,33 @@ checkbox__icon {
   background-repeat: no-repeat;
   background-position: center;
 }
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-bottom: 200px;
+    padding-top: 200px;
+    max-width: 1600px;
+  }
+}
 
 .hero__title {
-  color: #ffffff;
-  font-family: Roboto, monospace;
-  font-size: 44px;
+  font-size: 26px;
   font-weight: 900;
-  line-height: 1.36;
+  line-height: 1.61;
   letter-spacing: 0.06em;
-  margin-bottom: 30px;
+  text-align: center;
   text-transform: uppercase;
+  color: #fff;
+  max-width: 360px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.36;
+    max-width: 696px;
+  }
 }
 
 .qualities-list {

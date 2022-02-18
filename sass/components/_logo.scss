@@ -3,10 +3,7 @@
     font-family: Raleway,  monospace;
     @include font-logo;
     text-decoration: none;
-    @media screen and (max-width: 767px) {
-        display: inline-block;
-        padding: 16px 0 16px 0;
-    } 
+   
 }
 .header__logo-1 {
 color: #000000;
