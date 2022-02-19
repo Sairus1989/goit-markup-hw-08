@@ -15,7 +15,11 @@
   justify-content: center;
   @extend %align-list;
     border-bottom: 1px solid #ECECEC;
-    @include desk {
+    
+    @include tab {
+        padding-top: 0;
+  padding-bottom: 0;
+    }@include desk {
         padding-top: 0;
   padding-bottom: 0;
     }
