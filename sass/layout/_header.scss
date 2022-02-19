@@ -1,7 +1,6 @@
 .header {
-    
     @include tel {
-        width: 480px;
+        
         margin: 0;
     }
     font-family: Roboto, monospace;
@@ -12,9 +11,14 @@
     position: relative;
     padding-top: 10px;
   padding-bottom: 10px;
+  
   justify-content: center;
   @extend %align-list;
     border-bottom: 1px solid #ECECEC;
+    @include desk {
+        padding-top: 0;
+  padding-bottom: 0;
+    }
 }
 .site-nav {
     justify-content: center;
@@ -112,6 +116,7 @@ color: var(--primary-text-color);
     @media screen and (min-width: 768px) {
         display: none;
     }
+    display: inline-flex;
     font-size: 100%;
     width: 40px;
     height: 40px;
@@ -120,18 +125,22 @@ color: var(--primary-text-color);
     background-color: #FFFFFF;
     cursor: pointer;
 
+    
     & .menu-icon__close {
+        display: block;
+    }
+    & .menu-icon__open {
         display: none;
     }
     &.is-open .menu-icon__close {
-        display: block;
-    }
-    &.is-open .menu-icon_open {
         display: none;
+    }
+    &.is-open .menu-icon__open {
+        display: block;
     }
 }
 .menu-open-btn__icon {
-  color: #000;
+  color: var(--accent-color);
   transition: color var(--transition-duration) var(--transition-timing-function);
   &:hover,
   &:focus {

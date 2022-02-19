@@ -461,7 +461,6 @@ checkbox__icon {
 }
 @media screen and (mіn-width: 480px) {
   .header {
-    width: 480px;
     margin: 0;
   }
 }
@@ -474,6 +473,12 @@ checkbox__icon {
       -ms-flex-pack: center;
           justify-content: center;
   border-bottom: 1px solid #ECECEC;
+}
+@media screen and (min-width: 1200px) {
+  .header__container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .site-nav {
@@ -598,6 +603,9 @@ checkbox__icon {
 }
 
 .menu-open-btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   font-size: 100%;
   width: 40px;
   height: 40px;
@@ -612,17 +620,20 @@ checkbox__icon {
   }
 }
 .menu-open-btn .menu-icon__close {
+  display: block;
+}
+.menu-open-btn .menu-icon__open {
   display: none;
 }
 .menu-open-btn.is-open .menu-icon__close {
-  display: block;
-}
-.menu-open-btn.is-open .menu-icon_open {
   display: none;
+}
+.menu-open-btn.is-open .menu-icon__open {
+  display: block;
 }
 
 .menu-open-btn__icon {
-  color: #000;
+  color: var(--accent-color);
   -webkit-transition: color var(--transition-duration) var(--transition-timing-function);
   transition: color var(--transition-duration) var(--transition-timing-function);
 }
@@ -652,18 +663,31 @@ checkbox__icon {
   margin-right: auto;
   background-color: #2F303A;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/heroesoptimiz.jpg);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/heroesoptimiz.jpg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/Header-mob-1.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Header-mob-1.jpg);
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/Header-mob-2.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Header-mob-2.jpg);
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero {
     padding-bottom: 200px;
     padding-top: 200px;
     max-width: 1600px;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/heroesoptimiz.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/heroesoptimiz.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/Header-desk-2.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Header-desk-2.jpg);
   }
 }
 
