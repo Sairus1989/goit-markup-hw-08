@@ -1,10 +1,22 @@
 .header {
     @include tel {
         margin: 0;
+        font-family: Roboto, monospace;
+        text-decoration: none;
+        font-style: normal;
     }
-    font-family: Roboto, monospace;
-    @include font(14px, 500, 1.14, 0.02em);
-    text-decoration: none;  
+    @include tab {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    }
+    @include desk {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    }
 }
 .header__container { 
     position: relative;
@@ -40,7 +52,7 @@
         color: var(--primary-text-color);
         transition: color 250ms var(--timing-function);
     @include tab {
-        padding: 0;
+    padding: 0;
     }
     @include desk {
         padding-top: 32px;
@@ -55,11 +67,10 @@
 .bottom-list  {
     display: none;
     @include tab {
-        display: block;
-        margin-left: auto;
+    display: block;
+    margin-left: 84px;
     }
     @include desk {
-
     align-items: baseline;
     display: flex;
     padding-left: 0;
@@ -67,20 +78,32 @@
     }
 }
 .bottom-list__item {
-  
     align-items: center;
+    &:last-child {
+    margin-top: 10px;  
+  }
+
+@include desk {
+    &:last-child {
+    margin-top: 0px;
+  }
+ }
 }
+@include desk {
 .bottom-list__item + .bottom-list__item {
-    margin-left: 30px;
+    margin-left: 30px;}
 }
 .top-list {
     display: none;
     @include tab {
     display: flex;
     align-items: center;
-    margin-left: 93px;
     padding-left: 0;
-    color: var(--title-text-color); 
+    color: var(--title-text-color);
+    margin-left: 88px;
+    }
+    @include desk {
+    margin-left: 93px;
 }
  }
 
@@ -118,9 +141,6 @@
     color: var(--accent-color);
 }
 .bottom-list__icon {
-    @include tab {
-
-    }
     fill: currentColor;
     @include tab {
     margin-right: 8px;
@@ -129,7 +149,16 @@
     margin-right: 10px;
     align-items: baseline;
     }
-    
+}
+@media screen and (max-width: 1199px) {
+    .tabphone {
+    width: 10px;
+    height: 14px; 
+    }
+    .tabemail {
+    width: 14px;
+    height: 10px;
+    }
 }
 
 .menu-open-btn {
