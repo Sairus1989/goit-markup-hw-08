@@ -759,6 +759,11 @@ checkbox__icon {
   margin-bottom: 302px;
 }
 
+.container-menu__link-tel {
+  font-size: 34px;
+  line-height: 1.17;
+}
+
 .current {
   position: relative;
   color: #2196F3;
