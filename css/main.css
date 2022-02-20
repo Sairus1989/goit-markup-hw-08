@@ -682,6 +682,9 @@ checkbox__icon {
 .menu-open-btn.is-open .menu-icon__open {
   display: block;
 }
+.menu-open-btn:hover, .menu-open-btn:focus {
+  fill: var(--accent-color);
+}
 
 .menu-open-btn__icon {
   color: var(--accent-color);

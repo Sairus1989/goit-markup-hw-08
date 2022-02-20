@@ -162,6 +162,10 @@
     &.is-open .menu-icon__open {
         display: block;
     }
+    &:hover,
+    &:focus {
+        fill: var(--accent-color);
+    }
 }
 
 .menu-open-btn__icon {
