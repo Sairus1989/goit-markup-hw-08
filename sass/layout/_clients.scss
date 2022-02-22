@@ -1,12 +1,25 @@
 .clients {
     display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-bottom: -30px;
+    @include desk {
+    
     justify-content: center;
+    }
 }
 .clients-title {
-    @extend .feature__title;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
     text-align: center;
     color: var(--title-text-color);
+    margin-bottom: 30px;
+    @include desk {
     margin-bottom: 50px;
+    font-size: 36px;
+    }
 }
 .clients__link {
     @extend %align-list;
@@ -18,6 +31,14 @@
     color: var(--icon-color);
 }
 .clients__link {
+    @media screen and (max-width: 767px) {
+        width: 100%;
+        height: 92px;
+        display: flex;
+        justify-content: center;
+        align-items: center;   
+    }
+    
     transition: color 250ms var(--timing-function), 
     border-color 250ms var(--timing-function);
 &:hover,
@@ -27,10 +48,18 @@
     }
 }
 .clients__item {
+    @media screen and (max-width: 1199px) {
+        margin-left: 30px;
+        margin-bottom: 30px; 
+        width: calc(100% / 2 - 30px);
+    }
+    
+    @include desk { 
     margin-right: 30px;
 &:last-child {
     margin-right: 0;
     }
+  }
 }
 .clients__icon {
     fill: currentColor;

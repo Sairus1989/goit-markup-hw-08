@@ -1,13 +1,22 @@
 .qualities-list {
+    display: block;
+    @include desk {
     padding-left: 0;
     display: flex;
+    }
 }
 .qualities-list__item {
+    margin-bottom: 30px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    @include desk {
     flex-basis: calc(100% / 4);
     margin-right: 30px;
-}
-.qualities-list__item:last-child {
+    &:last-child {
     margin-right: 0;
+  }
+ }
 }
 .qualities-list__block {
     @extend %align-list;

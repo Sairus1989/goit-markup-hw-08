@@ -14,17 +14,27 @@
     }
 }
 .footer-list__item {
-    margin-bottom: 9px;
+   
     font-family: Roboto;
-font-style: normal;
-&:last-child {
-    margin-bottom: 0;
+    font-style: normal;
+    margin-bottom: 8px;
+    &:last-child {
+        margin-bottom: 60px; 
+    }
+    @include desk {
+        margin-bottom: 9px;
+        &:last-child {
+        margin-bottom: 0;
+        }
     }
 }
 .footer-list {
     padding-left: 0;
 }
 .footer-list__maps {
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 8px;
+    }
     display: inline-block;
     color: #ffffff;
     font-family: Roboto, monospace;
@@ -39,9 +49,17 @@ font-style: normal;
 
 /* Футер "Присоединяйтесь" */
 .footer-container {
+    display: block;
+    @include desk {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    }
+}
+.join {
+    @media screen and (max-width: 1199px) {
+        text-align: center;  
+    }
 }
 .join-title {
     color: #ffffff;
@@ -105,9 +123,27 @@ font-style: normal;
     color: #FFFFFF;
     margin-bottom: 20px;
     }
+    .footer-form {
+        @media screen and (max-width: 1199px) {
+            text-align: center;  
+            justify-content: center;
+        }
+    }
     .footer-block {
+        @media screen and (max-width:1199px) {
+            align-items: center;
+            flex-direction: column;  
+            display: flex;
+        }
+        @include desk {
         display: flex;
         justify-content: flex-end;
+        }
+    }
+    .footer__block {
+        @media screen and (max-width: 1199px) {
+            text-align: center;  
+        }
     }
     .footer-block__input {
     font-family: Roboto;
@@ -118,7 +154,7 @@ font-style: normal;
     @extend %align-list;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
-    margin-right: 12px;
+    
     min-width: 358px;
     min-height: 50px;
     background-color: transparent;
@@ -127,4 +163,7 @@ font-style: normal;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     padding: 15px 16px;
+    @include desk {
+        margin-right: 12px;
+    }
     }

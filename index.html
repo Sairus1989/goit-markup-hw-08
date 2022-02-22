@@ -266,12 +266,22 @@
           <h2 class="team-title">Наша команда</h2>
           <ul class="border-list">
             <li class="border-list__item">
-              <img
-                src="./images/img1.jpg"
-                alt="Игорь Демьяненко"
-                width="270"
-                class="img"
-              />
+              <picture>
+                <source
+                    srcset="./images/igor-demianenko-1x.jpg 1x, ./images/igor-demianenko-2x.jpg 2x"
+                    media="(min-width:1200px)"
+                  />
+                  <source
+                    srcset="./images/igor-demianenko-tablet-1x.jpg 1x, ./images/igor-demianenko-tablet-2x.jpg 2x"
+                    media="(min-width:768px)"
+                  />
+                  <source
+                    srcset="./images/igor-demianenko-mobile-1x.jpg 1x, ./images/igor-demianenko-mobile-2x.jpg 2x"
+                    media="(min-width:320px)"
+                  />
+                <img src="./images/igor-demianenko-1x.jpg" alt="Игорь Демьяненко" />
+              </picture>
+            
               <h3 class="border-list__title">Игорь Демьяненко</h3>
               <p class="border-list__text">Product Designer</p>
               <ul class="list-network">
@@ -306,7 +316,21 @@
               </ul>
             </li>
             <li class="border-list__item">
-              <img src="./images/img2.jpg" alt="Ольга Репина" width="270" />
+              <picture>
+                <source
+                    srcset="./images/olga-repina-1x.jpg 1x, ./images/olga-repina-2x.jpg 2x"
+                    media="(min-width:1200px)"
+                  />
+                  <source
+                    srcset="./images/olga-repina-tab-1x.jpg 1x, ./images/olga-repina-tab-2x.jpg 2x"
+                    media="(min-width:768px)"
+                  />
+                  <source
+                    srcset="./images/olga-repina-mobile-1x.jpg 1x, ./images/olga-repina-mobile-2x.jpg 2x"
+                    media="(min-width:320px)"
+                  />
+                <img src="./images/olga-repina-1x.jpg" alt="Ольга Репина" />
+              </picture>
               <h3 class="border-list__title">Ольга Репина</h3>
               <p class="border-list__text">Frontend Developer</p>
               <ul class="list-network">
@@ -341,7 +365,21 @@
               </ul>
             </li>
             <li class="border-list__item">
-              <img src="./images/img3.jpg" alt="Николай Тарасов" width="270" />
+              <picture>
+                <source
+                    srcset="./images/nik-tarasov-1x.jpg 1x, ./images/nik-tarasov-2x.jpg 2x"
+                    media="(min-width:1200px)"
+                  />
+                  <source
+                    srcset="./images/nik-tarasov-tab-1x.jpg 1x, ./images/nik-tarasov-tab-2x.jpg 2x"
+                    media="(min-width:768px)"
+                  />
+                  <source
+                    srcset="./images/nik-tarasov-mobile-1x.jpg 1x, ./images/nik-tarasov-mobile-2x.jpg 2x"
+                    media="(min-width:320px)"
+                  />
+                <img src="./images/nik-tarasov-1x.jpg" alt="Николай Тарасов" />
+              </picture>
               <h3 class="border-list__title">Николай Тарасов</h3>
               <p class="border-list__text">Marketing</p>
               <ul class="list-network">
@@ -376,7 +414,22 @@
               </ul>
             </li>
             <li class="border-list__item">
-              <img src="./images/img4.jpg" alt="Михаил Ермаков" width="270" />
+              <picture>
+                <source
+                    srcset="./images/mih-ermak-1x.jpg 1x, ./images/mih-ermak-2x.jpg 2x"
+                    media="(min-width:1200px)"
+                  />
+                  <source
+                    srcset="./images/mih-ermak-tab-1x.jpg 1x, ./images/mih-ermak-tab-2x.jpg 2x"
+                    media="(min-width:768px)"
+                  />
+                  <source
+                    srcset="./images/mih-ermak-mobile-1x.jpg 1x, ./images/mih-ermak-mobile-2x.jpg 2x"
+                    media="(min-width:320px)"
+                  />
+                <img src="./images/mih-ermak-1x.jpg" alt="Михаил Ермаков"/>
+              </picture>
+              
               <h3 class="border-list__title">Михаил Ермаков</h3>
               <p class="border-list__text">UI Designer</p>
               <ul class="list-network">
@@ -467,7 +520,7 @@
     <!--Футер-->
     <footer class="footer">
       <div class="container footer-container">
-        <div>
+        <div class="footer__block">
           <a href="./index.html" class="footer__logo"
             >Web<span class="footer__logo--web">Studio</span></a
           >
