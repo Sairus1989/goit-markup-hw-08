@@ -36,8 +36,12 @@
     color: var(--primary-text-color);
 }
 .qualities-list__title {
+    @media screen and (max-width:767px) {
+        text-align: center;
+    }
     color: var(--title-text-color);
     font-family: Roboto, monospace;
     @include font($fs: 14px, $lh: 1.14);
     margin-bottom: 10px;
+    
 }
