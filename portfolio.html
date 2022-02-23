@@ -18,7 +18,6 @@
   <body class="page">
     <!--Шапка сайта-->
     <header class="header">
- 
       <div class="container header__container">
         <nav class="site-nav">
           <a href="./index.html" class="header__logo"
@@ -31,13 +30,14 @@
             <li class="top-list__item">
               <a href="./portfolio.html" class="top-list__link current">Портфолио</a>
             </li>
-            <li class="top-list__item"><a href="" class="top-list__link ">Контакты</a></li>
+            <li class="top-list__item"><a href="" class="top-list__link">Контакты</a></li>
           </ul>
         </nav>
         <ul class="bottom-list">
           <li class="bottom-list__item">
             <a href="mailto:info@devstudio.com" class="bottom-list__link">
-              <svg class="bottom-list__icon">
+              
+              <svg width="16px" height="12px" class="bottom-list__icon tabemail">
                 <use href="./images/icons.svg#icon-emeil"></use>
               </svg>
               info@devstudio.com</a
@@ -45,13 +45,57 @@
           </li>
           <li class="bottom-list__item">
             <a href="tel:+380961111111" class="bottom-list__link">
-              <svg class="bottom-list__icon">
+              <svg width="10px" height="16px" class="bottom-list__icon tabphone">
                 <use href="./images/icons.svg#icon-tel"></use>
               </svg>
               +38 096 111 11 11</a
             >
           </li>
         </ul>
+        <button type="button" class="menu-open-btn is-open" aria-expanded="false" data-menu-button>
+          <svg width="24px" height="16px" class="menu-open-btn__icon menu-icon__open" aria-label="Переключатель мобильного меню">
+            <use href="./images/icons.svg#icon-menu_24px" class=""></use>
+          </svg>
+          <svg width="18.67" height="18.67" class="menu-icon__close" >
+            <use href="./images/icons.svg#icon-clousemodal" class=""></use>
+          </svg>
+        </button>
+        <div class="container-menu" data-menu>
+         <ul class="container-menu__list">
+           <li class="container-menu__item">
+            <a href="./index.html" class="container-menu__link ">Студия</a>
+           </li>
+           <li class="container-menu__item">
+            <a href="./portfolio.html" class="container-menu__link current">Портфолио</a>
+          </li>
+          <li class="container-menu__item">
+            <a href="" class="container-menu__link">Контакты</a>
+          </li>
+         </ul>
+         <ul class="container-menu__contacts">
+          <li class="container-menu__item-tel">
+           <a href="./index.html" class="container-menu__link-tel current">+38 096 111 11 11</a>
+          </li>
+          <li class="container-menu__item-email">
+           <a href="" class="container-menu__link-email">info@devstudio.com</a>
+         </li>
+        </ul>
+        <ul class="container-menu__social">
+          <li class="container-menu__social-item">
+            <a href="" class="container-menu__social-link">Instagram</a>
+          </li>
+       
+          <li class="container-menu__social-item">
+            <a href="" class="container-menu__social-link">Twitter</a>
+          </li>
+          <li class="container-menu__social-item">
+            <a href="" class="container-menu__social-link">Facebook</a>
+          </li>
+          <li class="container-menu__social-item">
+            <a href="" class="container-menu__social-link">LinkedIn</a>
+          </li>
+        </ul>
+        </div>
       </div>
     </header>
     <!--Главный блок-->
@@ -310,5 +354,7 @@
           </div>
         </form>
       </div>
+      <script src="./js/modal.js"></script>
+      <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
