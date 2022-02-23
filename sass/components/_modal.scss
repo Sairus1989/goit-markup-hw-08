@@ -7,7 +7,7 @@
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
     transition: opacity 250ms var(--timing-function);
-    z-index: 9;
+    z-index: 1;
 }
 .modal {
     @media screen and (max-width: 767px) {
@@ -31,6 +31,7 @@
     }
 }
 .modal__btn-close {
+    padding: 0;
     position: absolute;
     @extend %align-list;
     justify-content: center;
@@ -142,14 +143,16 @@
     margin-top: 20px;
  }
  .checkbox__label {
+    font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
-    display: inline-flex;
-    justify-content: flex-start;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     @include desk {
         @include font(14px, 400, 1.71);
     }

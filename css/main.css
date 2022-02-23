@@ -192,7 +192,7 @@ a {
   opacity: 1;
   -webkit-transition: opacity 250ms var(--timing-function);
   transition: opacity 250ms var(--timing-function);
-  z-index: 9;
+  z-index: 1;
 }
 
 .modal {
@@ -228,6 +228,7 @@ a {
 }
 
 .modal__btn-close {
+  padding: 0;
   position: absolute;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -405,18 +406,25 @@ a {
 }
 
 .checkbox__label {
+  font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 @media screen and (min-width: 1200px) {
   .checkbox__label {
