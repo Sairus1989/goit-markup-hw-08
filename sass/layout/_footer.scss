@@ -32,9 +32,7 @@
     padding-left: 0;
 }
 .footer-list__maps {
-    @media screen and (max-width: 1199px) {
-        margin-bottom: 8px;
-    }
+   
     display: inline-block;
     color: #ffffff;
     font-family: Roboto, monospace;
@@ -50,6 +48,12 @@
 /* Футер "Присоединяйтесь" */
 .footer-container {
     display: block;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    }
     @include desk {
     display: flex;
     justify-content: space-between;
@@ -57,6 +61,10 @@
     }
 }
 .join {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        padding-left: 165px;
+        align-self: baseline;
+    }
     @media screen and (max-width: 1199px) {
         text-align: center;  
     }
@@ -161,7 +169,7 @@
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
     
-    min-width: 358px;
+    width: 100%;
     min-height: 50px;
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -169,7 +177,11 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     padding: 15px 16px;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+       width: 450px;
+    }
     @include desk {
         margin-right: 12px;
+        min-width: 358px;
     }
     }
