@@ -39,11 +39,13 @@ color: var(--primary-text-color);
 margin-top: 4px;
 }
 .examples-container {
+    
     padding: 20px 24px;
     border: 1px solid #EEEEEE;
     box-sizing: border-box;
     color: var(--title-text-color);
     border-top: none;
+    flex-grow: 1;
 }
 
 .link-overlay {
@@ -53,7 +55,9 @@ margin-top: 4px;
 
 
 .list-examples__link {
-    display: block;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     transition: box-shadow 250ms var(--timing-function);
 &:hover,
 &:focus {

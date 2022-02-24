@@ -10,7 +10,9 @@
     z-index: 2;
 }
 .modal {
-    @media screen and (max-width: 767px) {
+        width: 93.75vw; 
+        height: 609px;
+    @include tab {
         width: 450px; 
         height: 609px;
     }
@@ -149,7 +151,7 @@
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
     display: inline-flex;
-    
+    align-items: center;
     @include desk {
         @include font(14px, 400, 1.71);
     }
