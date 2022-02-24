@@ -192,7 +192,7 @@ a {
   opacity: 1;
   -webkit-transition: opacity 250ms var(--timing-function);
   transition: opacity 250ms var(--timing-function);
-  z-index: 1;
+  z-index: 2;
 }
 
 .modal {
@@ -218,7 +218,8 @@ a {
 }
 @media screen and (max-width: 767px) {
   .modal {
-    width: 90vw;
+    width: 450px;
+    height: 609px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -399,32 +400,18 @@ a {
 }
 
 .form__field-checkbox {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin-top: 20px;
 }
 
 .checkbox__label {
-  font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 @media screen and (min-width: 1200px) {
   .checkbox__label {
@@ -439,6 +426,10 @@ a {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   color: var(--accent-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 5px;
 }
 
 .checkbox__label span {

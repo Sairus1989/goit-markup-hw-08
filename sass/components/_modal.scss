@@ -7,11 +7,12 @@
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
     transition: opacity 250ms var(--timing-function);
-    z-index: 1;
+    z-index: 2;
 }
 .modal {
     @media screen and (max-width: 767px) {
-        width: 90vw; 
+        width: 450px; 
+        height: 609px;
     }
     position: absolute;
     top: 50%;
@@ -139,20 +140,16 @@
  }
 .form__field-checkbox {
     @extend %align-list;
-    justify-content: center;
     margin-top: 20px;
  }
  .checkbox__label {
-    font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    display: inline-flex;
+    
     @include desk {
         @include font(14px, 400, 1.71);
     }
@@ -160,6 +157,9 @@
  .checkbox__link {
     text-decoration-line: underline;
     color: var(--accent-color);
+    display: flex;
+    margin-left: 5px;
+    
 }
 .checkbox__label {
     span {
