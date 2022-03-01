@@ -1,4 +1,5 @@
 .header {
+    border-bottom: 1px solid #ECECEC;
     @include tel {
         margin: 0;
         font-family: Roboto, monospace;
@@ -193,7 +194,7 @@
 .container-menu {
     z-index: 1;
     display: none;
-    
+    width: 480px;
     height: 796px;
     position: absolute;
     top: 0;

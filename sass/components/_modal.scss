@@ -73,6 +73,9 @@
     }
 .form__field {
     margin-bottom: 10px;
+    &:last-child {
+        margin-bottom: 20px;
+    }
     }
 .input__text {
     display: block;
@@ -142,7 +145,7 @@
  }
 .form__field-checkbox {
     @extend %align-list;
-    margin-top: 20px;
+    justify-content: center;
  }
  .checkbox__label {
     font-weight: 400;
