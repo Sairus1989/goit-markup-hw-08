@@ -25,7 +25,7 @@
   align-items: center;
   justify-content: center;
   @extend %align-list;
-    border-bottom: 1px solid #ECECEC;
+    
     padding-top: 10px;
     padding-bottom: 10px;
     @include tab {
