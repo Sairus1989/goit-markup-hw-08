@@ -280,6 +280,9 @@ a {
 .form__field {
   margin-bottom: 10px;
 }
+.form__field:last-child {
+  margin-bottom: 20px;
+}
 
 .input__text {
   display: block;
@@ -402,7 +405,9 @@ a {
 }
 
 .form__field-checkbox {
-  margin-top: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .checkbox__label {
@@ -491,6 +496,9 @@ checkbox__icon {
   background-color: #188CE8;
 }
 
+.header {
+  border-bottom: 1px solid #ECECEC;
+}
 @media screen and (mіn-width: 480px) {
   .header {
     margin: 0;
@@ -527,7 +535,6 @@ checkbox__icon {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-bottom: 1px solid #ECECEC;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -748,9 +755,9 @@ checkbox__icon {
 
 .container-menu {
   z-index: 1;
-  width: 100vw;
-  height: 796px;
   display: none;
+  width: 480px;
+  height: 796px;
   position: absolute;
   top: 0;
   left: 0;
