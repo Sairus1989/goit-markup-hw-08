@@ -280,7 +280,7 @@ a {
 .form__field {
   margin-bottom: 10px;
 }
-.form__field:last-child {
+.form__field:nth-child(5) {
   margin-bottom: 20px;
 }
 
